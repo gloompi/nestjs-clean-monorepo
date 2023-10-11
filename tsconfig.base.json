@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nestjs-mono/interfaces": ["libs/interfaces/src/index.ts"]
+      "@nestjs-mono/interfaces": ["libs/interfaces/src/index.ts"],
+      "@nestjs-mono/rmq": ["libs/rmq/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,26 @@
+{
+  "name": "rmq",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/rmq/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/rmq",
+        "main": "libs/rmq/src/index.ts",
+        "tsConfig": "libs/rmq/tsconfig.lib.json",
+        "assets": ["libs/rmq/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/rmq/**/*.ts", "libs/rmq/package.json"]
+      }
+    }
+  },
+  "tags": []
+}

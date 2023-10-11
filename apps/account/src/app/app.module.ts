@@ -7,10 +7,10 @@ import { getMongoConfig } from './configs/mongo.config';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true, envFilePath: 'envs/.account.env ' }),
+    ConfigModule.forRoot({ isGlobal: true, envFilePath: 'envs/.account.env' }),
     MongooseModule.forRootAsync(getMongoConfig()),
     UserModule,
-    AuthModule
+    AuthModule,
   ],
 })
 export class AppModule {}
